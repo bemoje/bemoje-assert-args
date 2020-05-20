@@ -10,7 +10,9 @@ import chalk from 'chalk';
  */
 function assertArgs(...args) {
 	if (!isArgsDefined(...args)) {
-		throw new Error(chalk.bold.red(errorMessage))
+		throw new Error(
+			chalk.bold.red('One or more required arguments are undefined.'),
+		)
 	}
 }
 
